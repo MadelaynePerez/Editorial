@@ -269,16 +269,64 @@ public class QueryUsuario implements IBaseCrud<Usuario> {
         return null;
     }
 
-    public Usuario encontrarPorNombre(String nombreUsuario) {
+    public Usuario encontrarPorCorreoYContrasena(String correo, String Contrasena) {
         Connection connection = null;
         PreparedStatement pstmt = null;
 
         try {
             connection = Coneccion.getConnection();
 
-            String sql = "SELECT id_usuario, nombre, contrasena, correo_electronico, hobbie, descripcion, temas_de_interes, gustos, tipo_usuario, foto FROM usuario WHERE nombre = ?";
+            String sql = "SELECT id_usuario, nombre, contrasena, correo_electronico, hobbie, descripcion, temas_de_interes, gustos, tipo_usuario, foto FROM usuario WHERE correo_electronico = ? and contrasena = ? ";
             pstmt = connection.prepareStatement(sql);
-            pstmt.setString(1, nombreUsuario);
+            pstmt.setString(1, correo);
+            pstmt.setString(2, Contrasena );
+
+            ResultSet resultado = pstmt.executeQuery();
+            if (resultado.next()) {
+                Long idUsuario = resultado.getLong("id_usuario");
+                String nombre = resultado.getString("nombre");
+                String contrasena = resultado.getString("contrasena");
+                String correoElectronico = resultado.getString("correo_electronico");
+                String hobbie = resultado.getString("hobbie");
+                String descripcion = resultado.getString("descripcion");
+                String temasDeInteres = resultado.getString("temas_de_interes");
+                String gustos = resultado.getString("gustos");
+                Long tipoUsuario = resultado.getLong("tipo_usuario");
+                String foto = resultado.getString("foto");
+
+                Usuario temporal = new Usuario(idUsuario, nombre, contrasena, correoElectronico, hobbie, descripcion, temasDeInteres, gustos, tipoUsuario, foto);
+                return temporal;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (pstmt != null) {
+                    pstmt.close();
+                }
+                if (connection != null) {
+                    connection.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+    
+     public Usuario encontrarPorCorreo(String correo) {
+        Connection connection = null;
+        PreparedStatement pstmt = null;
+
+        try {
+            connection = Coneccion.getConnection();
+
+            String sql = "SELECT id_usuario, nombre, contrasena, correo_electronico, hobbie, descripcion, temas_de_interes, gustos, tipo_usuario, foto FROM usuario WHERE correo_electronico = ?  ";
+            pstmt = connection.prepareStatement(sql);
+            pstmt.setString(1, correo);
+         
 
             ResultSet resultado = pstmt.executeQuery();
             if (resultado.next()) {

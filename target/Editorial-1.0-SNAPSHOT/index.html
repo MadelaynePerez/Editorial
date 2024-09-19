@@ -2,10 +2,59 @@
 <html>
     <head>
         <title>Start Page</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        <a href="Test">aca</a>
-    </body>
+    <style>
+           body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Merriweather', serif; /* Fuente elegante */
+            background-color: #f1f3ce; /* Fondo gris oscuro */
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: #00293c; /* Fondo negro suave */
+            border: 1px solid #d4af37; /* Borde dorado */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px #1e656d; /* Sombra elegante */
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            color: #d4af37; /* Dorado */
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            margin: 10px;
+            border: 1px solid #d4af37; /* Borde dorado */
+            border-radius: 5px;
+            background-color: #333; /* Botón gris oscuro */
+            color: #d4af37; /* Texto dorado */
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d4af37; /* Fondo dorado en hover */
+            color: #1a1a1a; /* Texto negro en hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>EDITORIAL NEXT!</h1>
+        <button type="button" class="btn"  onclick="window.location.href='IniciarSesionServlet'">Iniciar Sesion</button>
+        <button type="button" class="btn" onclick="window.location.href='CrearUsuarioServlet'">Crear Cuenta</button>
+    </div>
+</body>
 </html>
