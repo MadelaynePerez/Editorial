@@ -16,8 +16,8 @@ C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\Revista
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\pago.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\Costo.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\QueryPeriodoDeTiempo.java
-C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\com\mycompany\editorial\UsuarioServlet.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\QueryPago.java
+C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\com\mycompany\editorial\IniciarSesionServlet.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\Revista.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\carteraDigital.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\Comentario.java
@@ -28,6 +28,7 @@ C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\com\mycompany\e
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Modelos\Categoria.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\QueryTag.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\com\mycompany\editorial\resources\JakartaEE10Resource.java
+C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\com\mycompany\editorial\CrearUsuarioServlet.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\QueryRevista.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\IBaseCrud.java
 C:\Users\DELL\Documents\NetBeansProjects\Editorial\src\main\java\Querys\QueryCosto.java
